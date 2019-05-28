@@ -1,0 +1,22 @@
+/*
+	- Build animation that forces freqItem buttons to say 'Added!' for only a few seconds
+	after the button has been clicked, then reverts back to the item name.
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: verdana;
+}
+
+.listStuff {
+	list-style-type: none;
+}
+
+.frequentItems {
+	
+}
