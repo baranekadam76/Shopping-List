@@ -1,10 +1,10 @@
-//Shopping List app
+//Shopping List app for me and Amanda to use (designed for us specifically)
 
 /*Some ideas for the app:
 	- make a pane that lists frequently bought items that you can add to the shoppingList array by click
 		* Use the properties I set up under frequentItems variable as drop downs that trigger the items
 	- clicking on an item on the list that displays will cross it out or remove it all together
-	- sort button for the list
+	- sort button to sort into categories automatically
 	- add a download button to download the list
 	- add a print button that will print out the list
 	- ability to edit the list once it has been generated (do this last)
@@ -25,6 +25,8 @@ function startList() {
 
 	var stopAdd = 0;
 
+	document.getElementById('sortBut').style.visibility = "hidden";
+
 	while (stopAdd < 1) {
 
 		switch (addFoodItem = prompt('Add an Item and its quantity:')) {
@@ -32,7 +34,7 @@ function startList() {
 				stopAdd++;
 				break;
 			default:
-				shoppingList.push(addFoodItem);
+				shoppingList.push(addFoodItem.charAt(0).toUpperCase() + addFoodItem.slice(1));
 				break;
 		}
 	}
@@ -143,6 +145,10 @@ function freqItem(item) {
 }
 
 function showList() {
+	shoppingList.sort();
+
+	document.getElementById('sortBut').style.visibility = "visible";
+	document.getElementById('testButton8').innerHTML = '';
 	document.getElementById('testButton7').innerHTML = '<h2>' + '<strong>Food List</strong>' + '</h2>';
 
 	for (var j = 0; j < shoppingList.length; j++) {
@@ -152,4 +158,7 @@ function showList() {
 	}
 }
 
-
+//Get this function to sort the items into categories
+function sortList() {
+	
+}

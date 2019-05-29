@@ -18,5 +18,27 @@ body {
 }
 
 .frequentItems {
-	
+
+}
+
+#sortBut {
+	visibility: hidden;
+}
+
+#categories {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80vw;
+	height: 1000px;
+	margin: auto;
+	background-color: lightblue;
+}
+
+.subcat {
+	width: 30vw;
+	height: 50px;
+	background-color: lightgreen;
 }

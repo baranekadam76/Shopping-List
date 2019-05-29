@@ -8,10 +8,11 @@
 <body>
 	<h1>Test Project</h1>
 
-	<div id="wrapper">
+	<div>
 
 		<button onclick="startList()">Start</button>
 		<button onclick="showList()">Show List</button>
+		<button onclick="sortList()" id="sortBut">Sort</button>
 		<div id="testButton7"></div>
 		<div id="testButton8"></div>
 
@@ -45,6 +46,14 @@
 		<button class="frequentItems" onclick="freqItem(frequentItems.meat[2])">Bacon</button> <br>
 		<button class="frequentItems" onclick="freqItem(frequentItems.meat[3])">Eggs</button> <br>
 
+	</div>
+
+	<div id="categories">
+		<div id="produce" class="subcat"><span>Produce</span></div>
+		<div id="meat" class="subcat"><span>Meat</span></div>
+		<div id="snacks" class="subcat"><span>Snacks</span></div>
+		<div id="condiments" class="subcat"><span>Condiments</span></div>
+		<div id="cold" class="subcat"><span>Cold</span></div>
 	</div>
 
 </body>
