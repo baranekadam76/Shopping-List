@@ -27,7 +27,8 @@ body {
 
 #categories {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -39,6 +40,12 @@ body {
 
 .subcat {
 	width: 30vw;
-	height: 50px;
+	height: auto;
+	text-align: center;
 	background-color: lightgreen;
+}
+
+.subcat div:first-child {
+	font-weight: bold;
+	text-decoration: underline;
 }
