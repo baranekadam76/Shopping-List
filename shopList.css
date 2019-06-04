@@ -21,7 +21,7 @@ body {
 
 }
 
-#sortBut {
+#printBut {
 	visibility: hidden;
 }
 
@@ -31,15 +31,16 @@ body {
 	justify-content: center;
 	position: absolute;
 	top: 0;
-	right: 0;
-	width: 80vw;
-	height: 1000px;
+	left: 20vw;
+	width: 30vw;
+	height: auto;
+	min-height: 300px;
 	margin: auto;
 	background-color: lightblue;
 }
 
 .subcat {
-	width: 30vw;
+	width: 10vw;
 	height: auto;
 	text-align: center;
 	background-color: lightgreen;

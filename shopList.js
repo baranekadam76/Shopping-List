@@ -2,10 +2,11 @@
 
 /*Some ideas for the app:
 	- clicking or tapping on an item on the list that displays will cross it out or remove it all together
-	- add a print button that will print out the list
+	- improve print functionality (try to target the category div only)
 	- ability to edit the list once it has been generated (do this last)
 		* This could work by perhaps using JS in my showList() function to add a 'Remove' button 
 		to the end of each list entry that can be pressed to remove the item from that list.
+	- build functionality to allow moving of Extras items to a category of user's choosing (drag and drop?)
 */
 
 var shoppingList = [];
@@ -28,7 +29,7 @@ function startList() {
 
 	var stopAdd = 0;
 
-	document.getElementById('sortBut').style.visibility = "hidden";
+	document.getElementById('printBut').style.visibility = "hidden";
 
 	while (stopAdd < 1) {
 
@@ -149,7 +150,7 @@ function freqItem(item) {
 
 function showList() {
 	shoppingList.sort();
-	document.getElementById('sortBut').style.visibility = "visible";
+	document.getElementById('printBut').style.visibility = "visible";
 
 	//Clearing the lists
 	document.getElementById('testButton8').innerHTML = '';
@@ -158,8 +159,6 @@ function showList() {
 	document.getElementById('snacks').innerHTML = '';
 	document.getElementById('condiments').innerHTML = '';
 	document.getElementById('cold').innerHTML = '';
-
-	document.getElementById('testButton7').innerHTML = '<h2>' + '<strong>Extras</strong>' + '</h2>';
 
 	//Printing the lists
 	for (var j = 0; j < shoppingList.length; j++) {
@@ -200,11 +199,10 @@ function showList() {
 }
 
 
-//Work on the Print functionality and start testing for some bugs
 
 
 
-//Get this function to sort the items into categories
-function sortList() {
-	//I may just skip this function for now
+//Opens print window to print the shopping list
+function printList() {
+	window.print();
 }
