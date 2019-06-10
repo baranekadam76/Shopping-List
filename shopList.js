@@ -10,12 +10,15 @@ var meatList = [];
 var snacksList = [];
 var condimentsList = [];
 var coldList = [];
+var variousList = [];
 var frequentItems = {
 	'produce': ['Green Pepper', 'Sweet Potato', 'Yellow Onion', 'Mushrooms', 'Avocado'],
 	'condiments': ['Barbeque Sauce', 'Ketchup', 'Ranch', 'Mayo'],
-	'snacks': ['Hummus', 'Cottage Cheese', 'Yoghurt', 'Lara Bars', 'Chips'],
-	'cold': ['Frozen Pizza', 'Bag of Fries', 'Ice Cream', 'Shredded Cheese', 'Cream Cheese', 'Sour Cream'],
-	'meat': ['Chicken', 'Beef', 'Bacon', 'Eggs']
+	'snacks': ['Hummus', 'Lara Bars', 'Corn Chips'],
+	'cold': ['Frozen Pizza', 'Bag of Fries', 'Ice Cream', 'Shredded Cheese', 'Cream Cheese', 
+			'Sour Cream', 'Cottage Cheese', 'Yoghurt'],
+	'meat': ['Chicken', 'Beef', 'Bacon', 'Eggs'],
+	'various': ['Almond Milk', 'Adam Coffee', 'Amanda Coffee', 'Tea', 'Honey', 'Cereal', 'Soup']
 };
 
 
@@ -85,19 +88,19 @@ function freqItem(item) {
 			break;
 		case 'Cottage Cheese':
 			var qty = prompt('How many?');
-			snacksList.push('Cottage Cheese ' + qty);
+			coldList.push('Cottage Cheese ' + qty);
 			break;
 		case 'Yoghurt':
 			var qty = prompt('How many? (packs of 4)');
-			snacksList.push('Yoghurt ' + qty + 'pack(s)');
+			coldList.push('Yoghurt ' + qty + 'pack(s)');
 			break;
 		case 'Lara Bars':
 			var qty = prompt('How many?');
 			snacksList.push('Lara Bars ' + qty);
 			break;
-		case 'Chips':
+		case 'Corn Chips':
 			var qty = prompt('How many?');
-			snacksList.push('Chips ' + qty);
+			snacksList.push('Corn Chips ' + qty);
 			break;
 		case 'Frozen Pizza':
 			var qty = prompt('How many?');
@@ -139,6 +142,34 @@ function freqItem(item) {
 			var qty = prompt('How many dozens?');
 			meatList.push('Eggs ' + qty + 'pack(s)');
 			break;
+		case 'Almond Milk':
+			var qty = prompt('How many?');
+			variousList.push('Almond Milk ' + qty);
+			break;
+		case 'Adam Coffee':
+			var qty = prompt('How many?');
+			variousList.push('Adam Coffee ' + qty);
+			break;
+		case 'Amanda Coffee':
+			var qty = prompt('How many?');
+			variousList.push('Amanda Coffee ' + qty);
+			break;
+		case 'Tea':
+			var qty = prompt('How many boxes?');
+			variousList.push('Tea ' + qty + 'box');
+			break;
+		case 'Honey':
+			var qty = prompt('How many?');
+			variousList.push('Honey ' + qty);
+			break;
+		case 'Cereal':
+			var qty = prompt('How many?');
+			variousList.push('Cereal ' + qty);
+			break;
+		case 'Soup':
+			var qty = prompt('How many cans?');
+			variousList.push('Soup ' + qty + 'cans');
+			break;
 	}
 
 }
@@ -154,11 +185,12 @@ function showList() {
 	document.getElementById('snacks').innerHTML = '';
 	document.getElementById('condiments').innerHTML = '';
 	document.getElementById('cold').innerHTML = '';
+	document.getElementById('various').innerHTML = '';
 
 	//Printing the lists to the screen
 	for (var j = 0; j < shoppingList.length; j++) {
 		if (shoppingList[j] === '') {
-			//Leaving this empty basically just means I'm skipping over the print to screen
+			//Leaving this empty basically just means I'm skipping over the 'print to screen'
 		}
 		else {
 		document.getElementById('testButton8').innerHTML += '<li class="listStuff" id="shoppingItem' 
@@ -227,6 +259,18 @@ function showList() {
 		//The '+=' in the above line is crucial for this to work properly and print the list out
 		}
 	}
+
+	for (var v = 0; v < variousList.length; v++) {
+		if (variousList[v] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('various').innerHTML += '<li class="listStuff" id="variousItem' 
+		+ v + '">' + ' - ' + variousList[v] + ' ' + '<button onclick="removeVarious(' + v + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
+		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
+	}
 }
 
 //Remove Item from the list functions
@@ -260,6 +304,11 @@ function removeCold(num) {
 	coldList[num] = '';
 }
 
+function removeVarious(num) {
+	document.getElementById('variousItem' + num).innerHTML = '';
+	variousList[num] = '';
+}
+
 
 //Opens print window to print the shopping list
 function printList() {
@@ -274,4 +323,5 @@ function printList() {
 Other than trying to remove the buttons in the printList() function,
 this project is pretty much done. I just need to make it look pretty and
 make it reponsive. Also, I need to add new items to the frequent list.
+Also, alphebatize the sub category listing.
 */
