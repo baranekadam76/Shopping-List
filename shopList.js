@@ -1,11 +1,6 @@
 //Shopping List app for me and Amanda to use (designed for us specifically)
 
 /*Some ideas for the app:
-	- clicking or tapping on an item on the list that displays will cross it out or remove it all together
-	- improve print functionality (try to target the category div only)
-	- ability to edit the list once it has been generated (do this last)
-		* This could work by perhaps using JS in my showList() function to add a 'Remove' button 
-		to the end of each list entry that can be pressed to remove the item from that list.
 	- build functionality to allow moving of Extras items to a category of user's choosing (drag and drop?)
 */
 
@@ -160,49 +155,123 @@ function showList() {
 	document.getElementById('condiments').innerHTML = '';
 	document.getElementById('cold').innerHTML = '';
 
-	//Printing the lists
+	//Printing the lists to the screen
 	for (var j = 0; j < shoppingList.length; j++) {
-		document.getElementById('testButton8').innerHTML += '<li class="listStuff">' + ' - ' +
-		shoppingList[j] + '</li>';
+		if (shoppingList[j] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('testButton8').innerHTML += '<li class="listStuff" id="shoppingItem' 
+		+ j + '">' + ' - ' + shoppingList[j] + ' ' + '<button onclick="removeShopping(' + j + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 
 	for (var p = 0; p < produceList.length; p++) {
-		document.getElementById('produce').innerHTML += '<li class="listStuff">' + ' - ' +
-		produceList[p] + '</li>';
+		if (produceList[p] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('produce').innerHTML += '<li class="listStuff" id="produceItem' 
+		+ p + '">' + ' - ' + produceList[p] + ' ' + '<button onclick="removeProduce(' + p + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 
 	for (var m = 0; m < meatList.length; m++) {
-		document.getElementById('meat').innerHTML += '<li class="listStuff">' + ' - ' +
-		meatList[m] + '</li>';
+		if (meatList[m] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('meat').innerHTML += '<li class="listStuff" id="meatItem' 
+		+ m + '">' + ' - ' + meatList[m] + ' ' + '<button onclick="removeMeat(' + m + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 
 	for (var s = 0; s < snacksList.length; s++) {
-		document.getElementById('snacks').innerHTML += '<li class="listStuff">' + ' - ' +
-		snacksList[s] + '</li>';
+		if (snacksList[s] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('snacks').innerHTML += '<li class="listStuff" id="snacksItem' 
+		+ s + '">' + ' - ' + snacksList[s] + ' ' + '<button onclick="removeSnacks(' + s + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 
 	for (var c = 0; c < condimentsList.length; c++) {
-		document.getElementById('condiments').innerHTML += '<li class="listStuff">' + ' - ' +
-		condimentsList[c] + '</li>';
+		if (condimentsList[c] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('condiments').innerHTML += '<li class="listStuff" id="condimentsItem' 
+		+ c + '">' + ' - ' + condimentsList[c] + ' ' + '<button onclick="removeCondiments(' + c + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 
 	for (var k = 0; k < coldList.length; k++) {
-		document.getElementById('cold').innerHTML += '<li class="listStuff">' + ' - ' +
-		coldList[k] + '</li>';
+		if (coldList[k] === '') {
+			//Leaving this empty basically just means I'm skipping over the print to screen
+		}
+		else {
+		document.getElementById('cold').innerHTML += '<li class="listStuff" id="coldItem' 
+		+ k + '">' + ' - ' + coldList[k] + ' ' + '<button onclick="removeCold(' + k + ')"' + 
+		'class="removeButtons">' + 'Remove' + '</button>' + '</li>';
 		//The '+=' in the above line is crucial for this to work properly and print the list out
+		}
 	}
 }
 
+//Remove Item from the list functions
+function removeProduce(num) {
+	document.getElementById('produceItem' + num).innerHTML = '';
+	produceList[num] = '';
+}
 
+function removeMeat(num) {
+	document.getElementById('meatItem' + num).innerHTML = '';
+	meatList[num] = '';
+}
 
+function removeShopping(num) {
+	document.getElementById('shoppingItem' + num).innerHTML = '';
+	shoppingList[num] = '';
+}
+
+function removeSnacks(num) {
+	document.getElementById('snacksItem' + num).innerHTML = '';
+	snacksList[num] = '';
+}
+
+function removeCondiments(num) {
+	document.getElementById('condimentsItem' + num).innerHTML = '';
+	condimentsList[num] = '';
+}
+
+function removeCold(num) {
+	document.getElementById('coldItem' + num).innerHTML = '';
+	coldList[num] = '';
+}
 
 
 //Opens print window to print the shopping list
 function printList() {
+	document.getElementById('mainContent').innerHTML = '';
 	window.print();
+	//Also have this window remove the 'Remove' button first before printing out
 }
+
+
+
+/*
+Other than trying to remove the buttons in the printList() function,
+this project is pretty much done. I just need to make it look pretty and
+make it reponsive. Also, I need to add new items to the frequent list.
+*/
