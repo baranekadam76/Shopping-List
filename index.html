@@ -11,46 +11,82 @@
 		<h1>Shopping List</h1>
 
 		<button onclick="startList()">Add Items</button>
-		<button onclick="showList()">Show List</button>
 		<button onclick="printList()" id="printBut">Print List</button>
 
-		<br><br><br><br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.produce[0])">Green Pepper</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.produce[1])">Sweet Potato</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.produce[2])">Yellow Onion</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.produce[3])">Mushrooms</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.produce[4])">Avocado</button> <br>
+		<div id="instructions">
+			Instructions:
+			<ul>
+				<li>For items that are not listed or are considered 'non-food' items, use the Add Items button.</li>
+			</ul>
+		</div>
 		<br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.condiments[0])">Barbeque Sauce</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.condiments[1])">Ketchup</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.condiments[2])">Ranch</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.condiments[3])">Mayo</button> <br>
+		<div id="produceDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[4])">Avocado</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[6])">Broccoli Crowns</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[5])">Garlic</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[0])">Green Pepper</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[7])">Hummus</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[8])">Jalapeno</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[10])">Lime</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[3])">Mushrooms</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[1])">Sweet Potato</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[9])">Tomato</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.produce[2])">Yellow Onion</button> <br>
+		</div>
 		<br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[0])">Almond Milk</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[1])">Adam Coffee</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[2])">Amanda Coffee</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[3])">Tea</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[4])">Honey</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[5])">Cereal</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.various[6])">Soup</button> <br>
+		<div id="condimentsDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[0])">Barbeque Sauce</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[6])">Buffalo Sauce</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[8])">Hot Sauce</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[1])">Ketchup</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[3])">Mayo</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[4])">Olive Oil</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[8])">Peanut Butter</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[2])">Ranch</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[5])">Spray Oil</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.condiments[7])">Tabasco</button> <br>
+		</div>
 		<br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.snacks[0])">Hummus</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.snacks[1])">Lara Bars</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.snacks[2])">Corn Chips</button> <br>
+		<div id="variousDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[1])">Adam Coffee</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[0])">Almond Milk</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[2])">Amanda Coffee</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[7])">Broth</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[5])">Cereal</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[4])">Honey</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[6])">Soup</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[3])">Tea</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.various[8])">Tortillas</button> <br>
+		</div>
 		<br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[0])">Frozen Pizza</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[1])">Bag of Fries</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[2])">Ice Cream</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[3])">Shredded Cheese</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[4])">Cream Cheese</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[5])">Sour Cream</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[6])">Cottage Cheese</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.cold[7])">Yoghurt</button> <br>
+		<div id="snacksDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.snacks[3])">Candy</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.snacks[1])">Corn Chips</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.snacks[0])">Lara Bars</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.snacks[2])">Pop Tarts</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.snacks[4])">Salsa</button> <br>
+		</div>
 		<br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.meat[0])">Chicken</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.meat[1])">Beef</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.meat[2])">Bacon</button> <br>
-		<button class="frequentItems" onclick="freqItem(frequentItems.meat[3])">Eggs</button> <br>
+		<div id="coldDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[1])">Bag of Fries</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[6])">Cottage Cheese</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[4])">Cream Cheese</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[0])">Frozen Pizza</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[2])">Ice Cream</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[3])">Shredded Cheese</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[5])">Sour Cream</button> <br>
+			
+			<button class="frequentItems" onclick="freqItem(frequentItems.cold[7])">Yoghurt</button> <br>
+		</div>
+		<br>
+		<div id="meatDiv">
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[2])">Bacon</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[1])">Beef</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[0])">Chicken Breast</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[4])">Chicken Thighs</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[5])">Drumsticks</button> <br>
+			<button class="frequentItems" onclick="freqItem(frequentItems.meat[3])">Eggs</button> <br>
+		</div>
 
 	</div>
 
@@ -80,7 +116,7 @@
 			<div id="cold"></div>
 		</div>
 		<div class="subcat">
-			<div>Extra Stuff</div>
+			<div>Extra/Non-Food</div>
 			<div id="testButton8"></div>
 		</div>
 	</div>
