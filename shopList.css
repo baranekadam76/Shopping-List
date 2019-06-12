@@ -6,58 +6,128 @@
 
 body {
 	font-family: verdana;
+	background-color: #FFF5E1;
 }
 
 .listStuff {
 	list-style-type: none;
 }
 
-.frequentItems {
-
-}
-
-#printBut {
-	visibility: hidden;
-}
-
 #categories {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	position: absolute;
-	top: 0;
-	left: 20vw;
-	width: 75vw;
+	width: 100vw;
 	height: auto;
-	min-height: 300px;
-	margin: auto;
+	min-height: 50vmin;
 	border: 1px solid black;
-	border-radius: 10px;
+	padding-top: 50px;
+	background-color: white;
 }
 
 .subcat {
 	width: 20vw;
 	height: auto;
 	text-align: center;
+	font-size: 1.5em;
 }
 
 .subcat div:first-child {
-	font-weight: bold;
 	text-decoration: underline;
+	margin-bottom: 10px;
 }
 
 .removeButtons {
 	visibility: visible;
 }
 
+#mainContent h1:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15vw;
+	height: 10vh;
+	font-family: Georgia;
+	text-align: center;
+	padding-top: 3vmin;
+	background-image: linear-gradient(90deg, #E9F7EE,#E9F7EE,#FFF5E1);
+}
+
+#addItem {
+	position: relative;
+	top: 0;
+	left: 15vw;
+	width: 10vw;
+	height: 10vh;
+	border: none;
+	font-size: 12pt;
+	background-color: #FFF5E1;
+}
+#addItem:hover {
+	animation: addHov 500ms ease;
+	animation-fill-mode: forwards;
+	cursor: pointer;
+	background-color: #E9F7EE;
+	font-weight: bold;
+}
+@keyframes addHov {
+	0% {
+		box-shadow: none;
+	}
+	100% {
+		box-shadow: 10px 10px 20px black;
+	}
+}
+
+#printBut {
+	visibility: hidden;
+	position: relative;
+	top: 0;
+	left: 15vw;
+	width: 10vw;
+	height: 10vh;
+	border: none;
+	font-size: 12pt;
+	background-color: #FFF5E1;
+}
+#printBut:hover {
+	animation: addHov 500ms ease;
+	animation-fill-mode: forwards;
+	cursor: pointer;
+	background-color: #E9F7EE;
+	font-weight: bold;
+}
+
 #instructions {
-	width: 20vw;
-	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 64vw;
+	height: 10vh;
+	padding: 10px;
+	background-image: linear-gradient(90deg, #FFF5E1,#E9F7EE,#E9F7EE);
+}
+
+#instructions div:first-child {
+	text-decoration: underline;
+	float: left;
+	margin-right: 40px;
+	height: 8vh;
+}
+
+#freqButtons {
+	display: flex;
 }
 
 
-
 /*Sub Categories, buttons and hover effects*/
+
+div h2:first-child {
+	font-family: Georgia;
+	font-size: 17pt;
+	padding-top: 1vmin;
+}
+
 #produceDiv {
 	width: 20vw;
 	height: auto;
@@ -74,7 +144,8 @@ body {
 @keyframes ProduceDrop {
 	0% {
 		max-height: 50px;
-		visibility: hidden;
+		visibility: hidden;.
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -83,6 +154,7 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
@@ -90,11 +162,10 @@ body {
 	width: 20vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #produceDiv > button {
@@ -102,9 +173,10 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #produceDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }
@@ -127,6 +199,7 @@ body {
 	0% {
 		max-height: 50px;
 		visibility: hidden;
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -135,6 +208,7 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
@@ -142,11 +216,10 @@ body {
 	width: 20vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #condimentsDiv > button {
@@ -154,16 +227,17 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #condimentsDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }
 
 
 #variousDiv {
-	width: 20vw;
+	width: 15vw;
 	height: auto;
 	max-height: 50px;
 	background-image: url(images/various.jpg);
@@ -179,6 +253,7 @@ body {
 	0% {
 		max-height: 50px;
 		visibility: hidden;
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -187,18 +262,18 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
 #variousDiv h2 {
-	width: 20vw;
+	width: 15vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #variousDiv > button {
@@ -206,16 +281,17 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #variousDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }
 
 
 #snacksDiv {
-	width: 20vw;
+	width: 15vw;
 	height: auto;
 	max-height: 50px;
 	background-image: url(images/snacks.jpg);
@@ -231,6 +307,7 @@ body {
 	0% {
 		max-height: 50px;
 		visibility: hidden;
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -239,18 +316,18 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
 #snacksDiv h2 {
-	width: 20vw;
+	width: 15vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #snacksDiv > button {
@@ -258,16 +335,17 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #snacksDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }
 
 
 #coldDiv {
-	width: 20vw;
+	width: 15vw;
 	height: auto;
 	max-height: 50px;
 	background-image: url(images/cold.jpg);
@@ -283,6 +361,7 @@ body {
 	0% {
 		max-height: 50px;
 		visibility: hidden;
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -291,18 +370,18 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
 #coldDiv h2 {
-	width: 20vw;
+	width: 15vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #coldDiv > button {
@@ -310,16 +389,17 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #coldDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }
 
 
 #meatDiv {
-	width: 20vw;
+	width: 15vw;
 	height: auto;
 	max-height: 50px;
 	background-image: url(images/meat.jpg);
@@ -335,6 +415,7 @@ body {
 	0% {
 		max-height: 50px;
 		visibility: hidden;
+		box-shadow: none;
 	}
 	20% {
 		max-height: 500px;
@@ -343,18 +424,18 @@ body {
 	100% {	
 		max-height: 500px;
 		visibility: visible;
+		box-shadow: 10px 10px 20px black;
 	}
 }
 
 #meatDiv h2 {
-	width: 20vw;
+	width: 15vw;
 	height: 50px;
 	margin: auto;
-	padding-top: 7px;
 	text-align: center;
 	background-color: #FC6971;
 	visibility: visible;
-	background-color: lightgray;
+	background-color: #F3F6F4;
 }
 
 #meatDiv > button {
@@ -362,9 +443,10 @@ body {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
+	border-left: 1px solid black;
 }
 #meatDiv > button:hover {
-	background-image: linear-gradient(120deg, #57D180, #FFCB6B);
+	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
 	font-weight: bold;
 	cursor: pointer;
 }

@@ -4,6 +4,7 @@
 	- build functionality to allow moving of Extras items to a category of user's choosing (drag and drop?)
 	- build a smooth welcome page with quick instructions that the user sees before using the app
 	- remove the buttons in the printList() function when printing
+	- make sub category dropdown menus a horizontal line instead of vertical (on top of each other)
 */
 
 var shoppingList = [];
@@ -36,7 +37,7 @@ function startList() {
 
 	while (stopAdd < 1) {
 
-		switch (addFoodItem = prompt('Add an Item and its quantity:')) {
+		switch (addFoodItem = prompt('Add an Item and its Quantity (type \'done\' when you are finished):')) {
 			case 'done':
 				stopAdd++;
 				showList();
@@ -239,7 +240,7 @@ function freqItem(item) {
 			break;
 		case 'Eggs':
 			var qty = prompt('How many dozens?');
-			meatList.push('Eggs ' + qty + 'pack(s)');
+			meatList.push('Eggs ' + qty + 'dozen');
 			showList();
 			break;
 		case 'Chicken Thighs':
@@ -471,6 +472,7 @@ function moveShopping(num) {
 //Opens print window to print the shopping list
 function printList() {
 	document.getElementById('mainContent').innerHTML = '';
+	document.getElementsByClassName('removeButtons').innerHTML = '';
 	window.print();
 	//Also have this window remove the 'Remove' button first before printing out
 }

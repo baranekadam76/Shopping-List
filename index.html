@@ -10,16 +10,19 @@
 	<div id="mainContent">
 		<h1>Shopping List</h1>
 
-		<button onclick="startList()">Add Items</button>
-		<button onclick="printList()" id="printBut">Print List</button>
+			<button id="addItem" onclick="startList()">Add Items</button>
+			<button onclick="printList()" id="printBut">Print List</button>
 
 		<div id="instructions">
-			Instructions:
-			<ul>
-				<li>For items that are not listed or are considered 'non-food' items, use the Add Items button.</li>
-			</ul>
+			<div>Instructions</div>
+			<div>
+				1. Use the categories below first, as they list our most frequently bought items. <br>
+				2. If you do not see something under the categories that you wish to add, use the 'Add Items' button to build a customized list. <br>
+				3. Use the 'Add Items' button for non-food items as well. <br>
+				4. Once finished, hit the 'Print List' button to print our your list!
+			</div>
 		</div>
-		<br>
+	<div id="freqButtons">
 		<div id="produceDiv">
 			<h2>Produce</h2>
 			<button class="frequentItems" onclick="freqItem(frequentItems.produce[4])">Avocado</button> <br>
@@ -93,9 +96,9 @@
 			<button class="frequentItems" onclick="freqItem(frequentItems.meat[5])">Drumsticks</button> <br>
 			<button class="frequentItems" onclick="freqItem(frequentItems.meat[3])">Eggs</button> <br>
 		</div>
-
 	</div>
 
+	</div>
 
 	<div id="categories">
 		<div class="subcat"
@@ -127,6 +130,6 @@
 			<div id="testButton8"></div>
 		</div>
 	</div>
-
+	
 </body>
 </html>
