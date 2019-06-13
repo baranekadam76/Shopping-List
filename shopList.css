@@ -173,7 +173,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #produceDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
@@ -227,7 +227,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #condimentsDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
@@ -281,7 +281,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #variousDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
@@ -335,7 +335,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #snacksDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
@@ -389,7 +389,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #coldDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);
@@ -443,7 +443,7 @@ div h2:first-child {
 	height: 30px;
 	background-color: #FFFFFF;
 	border: none;
-	border-left: 1px solid black;
+	border-left: 1px solid #E9F7EE;
 }
 #meatDiv > button:hover {
 	background-image: linear-gradient(120deg, #E9F7EE,#FFF5E1);

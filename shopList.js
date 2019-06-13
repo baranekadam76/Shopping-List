@@ -2,9 +2,6 @@
 
 /*Some ideas for the app:
 	- build a smooth welcome page with quick instructions that the user sees before using the app
-	- remove the buttons in the printList() function when printing
-		* what I may have to do to accomplish this is to modify the current removeButton functions
-		to only display when I hit an 'Edit' button (which I would create).
 */
 
 var shoppingList = [];
@@ -565,7 +562,6 @@ function moveShopping(num) {
 //Opens print window to print the shopping list
 function printList() {
 	document.getElementById('mainContent').innerHTML = '';
-	showPrintList();
+	showPrintList(); //This removes the buttons from the list
 	window.print();
-	//Also have this window remove the 'Remove' button first before printing out
 }
