@@ -30,7 +30,7 @@ function startList() {
 
 	while (stopAdd < 1) {
 
-		switch (addFoodItem = prompt('Add an Item and its Quantity (type \'done\' when you are finished):')) {
+		switch (addFoodItem = prompt('Add an Item and its Quantity\n(type \'done\' after you have entered your last item):')) {
 			case 'done':
 				stopAdd++;
 				showList();
