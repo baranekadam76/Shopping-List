@@ -1,9 +1,5 @@
 //Shopping List app for me and Amanda to use (designed for us specifically)
 
-/*Some ideas for the app:
-	- build a smooth welcome page with quick instructions that the user sees before using the app
-*/
-
 var shoppingList = [];
 var produceList = [];
 var meatList = [];
@@ -530,24 +526,36 @@ function removeVarious(num) {
 
 //Move item from the Extra/Non-Food list to a different list
 function moveShopping(num) {
-	switch(prompt('Select the list to move the item to (1-6 are your choices).\n' + 
-		'1. Produce 2. Meat 3. Snacks 4. Condiments 5. Various 6. Cold')) {
+	switch(prompt('Select the list to move the item to:\n' + 
+		'1. Produce 2. Meat \n3. Snacks   4. Condiments \n5. Various 6. Cold')) {
 		case '1':
+		case 'produce':
+		case 'Produce':
 			produceList.push(shoppingList[num]);
 			break;
 		case '2':
+		case 'meat':
+		case 'Meat':
 			meatList.push(shoppingList[num]);
 			break;
 		case '3':
+		case 'snacks':
+		case 'Snacks':
 			snacksList.push(shoppingList[num]);
 			break;
 		case '4':
+		case 'condiments':
+		case 'Condiments':
 			condimentsList.push(shoppingList[num]);
 			break;
 		case '5':
+		case 'various':
+		case 'Various':
 			variousList.push(shoppingList[num]);
 			break;
 		case '6':
+		case 'cold':
+		case 'Cold':
 			coldList.push(shoppingList[num]);
 			break;
 		default:
